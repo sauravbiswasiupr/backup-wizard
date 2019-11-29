@@ -9,24 +9,6 @@ g_login = GoogleAuth()
 g_login.LocalWebserverAuth()
 drive = GoogleDrive(g_login)
 
-# file_list = drive.ListFile(
-#     {'q': "'root' in parents and trashed=false"}).GetList()
-
-# mimetypes = {
-#     # Drive Document files as MS Word files.
-#     'application/vnd.google-apps.document': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-
-#     # Drive Sheets files as MS Excel files.
-#     'application/vnd.google-apps.spreadsheet': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-
-#     # etc.
-# }
-
-# for file1 in file_list:
-#     download_mimetype = None
-#     if file1['mimeType'] in mimetypes:
-#         download_mimetype = mimetypes[file1['mimeType']]
-#         file1.GetContentFile(file1['title'], mimetype=download_mimetype)
 
 directory = sys.argv[1]
 dir_name = directory.split("/")[-1]
